@@ -1,4 +1,7 @@
-const API_URL = 'http://localhost:3000/api';
+// Use current domain for API calls (works for both localhost and Vercel)
+const API_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/api' 
+    : `${window.location.origin}/api`;
 
 // Check authentication
 const token = localStorage.getItem('token');
