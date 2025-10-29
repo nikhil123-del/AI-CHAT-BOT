@@ -52,7 +52,7 @@ app.use(cors({
   origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
   credentials: true
 }));
-app.use(express.json({ limit: '10mb' }));
+app.use(express.json({ limit: '13mb' }));
 app.use(express.static(join(__dirname, 'public')));
 app.use('/uploads', express.static(join(__dirname, 'uploads')));
 
