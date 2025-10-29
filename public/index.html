@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groq AI Chat - Sign In</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="23" stroke="url(#gradient)" stroke-width="4"/>
+                    <path d="M15 25L22 32L35 18" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="50" y2="50">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="title">Groq AI Chat</h1>
+            <p class="subtitle">Your friendly AI assistant powered by Groq</p>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <h2>Welcome Back!</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <p class="form-footer">
+                    Don't have an account? 
+                    <a href="#" id="showRegister">Sign up</a>
+                </p>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="registerUsername">Username</label>
+                    <input type="text" id="registerUsername" placeholder="johndoe" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" placeholder="••••••••" required minlength="6">
+                    <small>At least 6 characters</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <p class="form-footer">
+                    Already have an account? 
+                    <a href="#" id="showLogin">Sign in</a>
+                </p>
+            </form>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
